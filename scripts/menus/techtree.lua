@@ -46,7 +46,7 @@ function RunTechTreeMenu(civilization_number)
 	local civilization_list = GetAvailableCivilizationsTechTree()
 --	local button_quantity = 0
 
-	menu:addLabel("~<Civilization:~>", offx + 244, offy + (10 + 15) - 20, Fonts["game"], false)
+	menu:addLabel(_("~<Civilization:~>"), offx + 244, offy + (10 + 15) - 20, Fonts["game"], false)
 	civilization_dd = menu:addDropDown(civilization_list, offx + 244, offy + 10 + 15,
 		function(dd) menu:stop(); RunTechTreeMenu(civilization_dd:getSelected()) end)
 	civilization_dd:setSelected(civilization_number)
