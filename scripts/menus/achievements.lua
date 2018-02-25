@@ -96,11 +96,11 @@ function addAchievementIcon(achievement, menu, x, y)
 			
 			local description = GetAchievementData(achievement, "Description")
 			if (GetAchievementData(achievement, "ProgressMax") > 0) then
-				description = description .. "\n\nProgress: " .. GetAchievementData(achievement, "Progress") .. "/" .. GetAchievementData(achievement, "ProgressMax")
+				description = description .. "\n\n" .. _("Progress:") .. " " .. GetAchievementData(achievement, "Progress") .. "/" .. GetAchievementData(achievement, "ProgressMax")
 			end
 			l:setCaption(description)
 			
-			achievement_menu:addFullButton("~!Close", "c", (achievement_menu:getWidth() / 2) - (224 / 2), achievement_menu:getHeight() - 40 * 1,
+			achievement_menu:addFullButton(_("~!Close"), "c", (achievement_menu:getWidth() / 2) - (224 / 2), achievement_menu:getHeight() - 40 * 1,
 				function()
 					achievement_menu:stop()
 				end)
