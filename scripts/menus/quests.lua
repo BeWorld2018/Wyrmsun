@@ -206,7 +206,7 @@ function RunQuestMenu(world)
 				confirm:addLabel("Delete " .. GetCurrentCustomHero(), 288 / 2, 11)
 				confirm:addLabel("Are you sure? This cannot be undone.", 288 / 2, 45, Fonts["game"])
 
-				confirm:addHalfButton("~!Yes", "y", 1 * (288 / 3) - 90, 120 - 16 - 27,
+				confirm:addHalfButton(_("~!Yes"), "y", 1 * (288 / 3) - 90, 120 - 16 - 27,
 					function()
 						DeleteCustomHero(GetCurrentCustomHero())
 						confirm:stop()
@@ -214,7 +214,7 @@ function RunQuestMenu(world)
 					end
 				)
 
-				confirm:addHalfButton("~!No", "n", 3 * (288 / 3) - 116, 120 - 16 - 27,
+				confirm:addHalfButton(_("~!No"), "n", 3 * (288 / 3) - 116, 120 - 16 - 27,
 					function() confirm:stop() end
 				)
 
