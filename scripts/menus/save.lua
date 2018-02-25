@@ -53,7 +53,7 @@ function RunSaveMenu()
   local menu = WarGameMenu(panel(3))
   menu:resize(384, 256)
 
-  menu:addLabel("Save Game", 384 / 2, 11)
+  menu:addLabel(_("Save Game"), 384 / 2, 11)
 
   local t = menu:addTextInputField("game.sav",
     (384 - 300 - 18) / 2, 11 + 24, 318)
@@ -65,7 +65,7 @@ function RunSaveMenu()
   end
   browser:setActionCallback(cb)
 
-  menu:addHalfButton("~!Save", "s", (384 - 300 - 18) / 2, 256 - 16 - 27,
+  menu:addHalfButton(-("~!Save"), "s", (384 - 300 - 18) / 2, 256 - 16 - 27,
     function()
       local name = t:getText()
       -- check for an empty string
